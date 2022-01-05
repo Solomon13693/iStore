@@ -196,7 +196,7 @@ a{
 .handle-counter .counter-minus,  .handle-counter .counter-plus { text-align: center; }
 
 .handle-counter input {
-  width: 50px;
+  width: 50%;
   border-width: 1px;
   border-left: none;
   border-right: none;

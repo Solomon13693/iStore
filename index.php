@@ -17,81 +17,7 @@
   <body>
  
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container">
-        <a class="navbar-brand me-lg-5" href="index.html">
-          <img class="navbar_logo" src="./assets/images/istore_logo.png" alt="">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-5">
-
-            <li class="nav-item">
-              <a class="nav-link" style="color: red !important; font-weight: 500;" href="#">Festival Deals</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="mac.html">Mac</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="iphone.html">Iphone</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="ipad.html">Ipad</a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="apple-watch.html">Apple Watch</a>
-              </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="airpod.html">Airpods</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link " href="accessories.html">Accessories</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="support.html">Support</a>
-            </li>
-
-          </ul>
-
-          
-          <ul class="nav_icons d-flex mt-2 mx-0">
-            <li><a href=""> <i class="fas fa-search"></i> </a></li>
-            <li><a href="login.html"> <i class="fas fa-user-circle"></i> </a></li>
-            <li><a data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"> <i class="fas fa-shopping-cart cart"></i> </a></li>
-          </ul>
-          
-        </div>
-        
-      </div>
-      
-    </nav>
-
-    <!-- Offset -->  
-  <div class="offcanvas offcanvas-end text-center" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-    <div class="offcanvas-header">
-      <h6 class="fw-bold text-center m-auto" id="offcanvasRightLabel">Shopping cart (0)</h6>
-      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-
-    <hr class="w-100">
-    <div class="offcanvas-body">
-      
-      <i class="fas fa-shopping-cart cart fa-2x"></i>
-      <p class="fw-light mt-4 mb-0">Your Cart is Empty</p>
-      <p class="fw-light mt-2"><a href="">Continue Shopping</a></p>
-    </div>
-  </div>
-  
+   <?php include_once("./components/Header.php") ?>
 
   <!-- Banner -->
   <div class="swiper mySwiper desktop_slider">
@@ -131,31 +57,47 @@
 
     <div class="row">
       <div class="col-lg-3 col-sm-6 col-6 mb-3" >
-          <img class="cat_img" src="assets/images/categories1.png" alt="">
+          <a href="all.php">
+            <img class="cat_img" src="assets/images/categories1.png" alt="">
+          </a>
       </div>
       <div class="col-lg-3 col-sm-6 col-6">
+         <a href="">
           <img class="cat_img" src="assets/images/categories2.png" alt="">
+         </a>
       </div>
       <div class="col-lg-3 col-sm-6 col-6 mb-3">
+         <a href="accessories.php">
           <img class="cat_img" src="assets/images/categories3.png" alt="">
+         </a>
       </div>
       <div class="col-lg-3 col-sm-6 col-6 mb-3">
-          <img class="cat_img" src="assets/images/categories4.png" alt="">
+          <a href="">
+            <img class="cat_img" src="assets/images/categories4.png" alt="">
+          </a>
       </div>
     </div>   
 
     <div class="row mt-4">
       <div class="col-lg-3 col-sm-6 col-6 mb-3" >
+         <a href="iphone.php">
           <img class="cat_img" src="assets/images/categories5.png" alt="">
+         </a>
       </div>
       <div class="col-lg-3 col-sm-6 col-6 mb-3">
+         <a href="ipad.php">
           <img class="cat_img" src="assets/images/categories6.png" alt="">
+         </a>
       </div>
       <div class="col-lg-3 col-sm-6 col-6 mb-3">
+         <a href="mac.php">
           <img class="cat_img" src="assets/images/categories7.png" alt="">
+         </a>
       </div>
       <div class="col-lg-3 col-sm-6 col-6 mb-3">
-          <img class="cat_img" src="assets/images/categories8.png" alt="">
+          <a href="apple-watch.php">
+            <img class="cat_img" src="assets/images/categories8.png" alt="">
+          </a>
       </div>
     </div>
 
@@ -255,67 +197,8 @@
     </div>
   </div>
 
-  <div class="footer pt-4">
-
-    <div class="container">
-      <div class="row">
-
-        <div class="col-sm-3 mb-3">
-          <img style="width: 140px;" src="./assets/images/iphone.png" alt="">
-
-          <div class="social_media_icons mt-3">
-            <i class="fab fa-facebook"></i>
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-youtube"></i>
-            <i class="fab fa-instagram"></i>
-            <i class="fas fa-envelope"></i>
-          </div>
-
-        </div>
+  <?php include_once("./components/Footer.php") ?>
   
-        <div class="col-sm-3 mb-3">
-          <h6 class="fw-bold"> Company </h6>
-            <li><a href="">Store Locator</a></li>
-            <li><a href="">Contact</a></li>
-        </div>
-  
-        <div class="col-sm-3 mb-3">
-          <h6 class="fw-bold"> Products </h6>
-            <li><a href="">Shop Ipad</a></li>
-            <li><a href="">Shop Iphone</a></li>
-            <li><a href="">Shop Mac</a></li>
-            <li><a href="">Shop Accessories</a></li>
-        </div>
-  
-        
-        <div class="col-sm-3 mb-3">
-          <h6 class="fw-bold"> Policies </h6>
-            <li><a href="">Terms of services </a></li>
-            <li><a href="">Return policy</a></li>
-            <li><a href="">Shopping policy</a></li>
-            <li><a href="">Privacy policy</a></li>
-      </div>
-  
-    </div>
-    </div>
-
-    <div class="footer_bottom pt-3">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-6">
-            <p> &copy; 2021 iStore Nigeria</p>
-          </div>
-
-          <div class="col-6 d-flex justify-content-end">
-            <img src="./assets/images/master.png" alt="">
-          </div>
-
-        </div>
-      </div>
-    </div>
-    
-  </div>
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="./assets/js/bootstrap.min.js"></script>
