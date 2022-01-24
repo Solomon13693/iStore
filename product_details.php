@@ -18,7 +18,7 @@
  
 
   <?php 
-  include_once("./components/Header.php");
+  require_once("./components/Header.php");
   require_once "./functions/selectProducts.php";
   ?>
   
@@ -50,7 +50,7 @@
                       
                     </div>
                     <div class="col-6">
-                        <button class="btn btn-primary w-100"><i class="fas fa-shopping-cart cart"></i> Add to cart</button>
+                        <button onclick="location.href='cartHandler.php?cart_id=<?php echo $id ?>&cart_name=<?php echo $name ?>&cart_price=<?php echo $price ?>&cart_image=<?php echo $image ?> ' " class="btn btn-primary w-100"><i class="fas fa-shopping-cart cart"></i> Add to cart</button>
                     </div>
                 </div>
 

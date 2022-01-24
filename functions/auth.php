@@ -17,7 +17,7 @@
                     $this->pdo->query("INSERT INTO $table_name ($column) VALUES ($values) ");
                 }
 
-                public function select($column, $value){
+                public function selectLogin($column, $value){
                     $table_name = $this->attr["table_name"];
                     $this->stmt = $this->pdo->query("SELECT * FROM $table_name WHERE email = '$column' AND password = '$value' ");
                 }

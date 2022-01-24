@@ -1,3 +1,5 @@
+<?php require_once "./functions/auth.php"; ?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -17,7 +19,7 @@
   <body>
  
 
-   <?php include_once("./components/Header.php") ?>
+   <?php require_once("./components/Header.php") ?>
 
   <!-- Banner -->
   <div class="swiper mySwiper desktop_slider">
@@ -143,56 +145,39 @@
 
       <div class="owl-carousel owl-theme">
   
-        <div class="item text-center">
-          <div class="new_festival">
-              <div class="new">New</div>
-            <div class="festival">Festival Sales</div>
-          </div>
-            <img src="assets/images/Phones/phone1.png" alt="">
-            <p class="description">10.2 inches Ipad 9th Gen Wi-Fi 64gb</p>
-            <p class="price"> 229,000.00</p>
-        </div>
-  
-        <div class="item text-center">
-          <div class="new_festival">
-              <div class="new">New</div>
-            <div class="festival">Festival Sales</div>
-          </div>
-            <img src="assets/images/Phones/phone2.png" alt="">
-            <p class="description">10.2 inches Ipad 9th Gen Wi-Fi 64gb</p>
-            <p class="price"> 229,000.00</p>
-        </div>
-  
-        <div class="item text-center">
-          <div class="new_festival">
-              <div class="new">New</div>
-            <div class="festival">Festival Sales</div>
-          </div>
-            <img src="assets/images/Phones/phone3.png" alt="">
-            <p class="description">10.2 inches Ipad 9th Gen Wi-Fi 64gb</p>
-            <p class="price"> 229,000.00</p>
-        </div>
-  
-        <div class="item text-center">
-          <div class="new_festival">
-              <div class="new">New</div>
-            <div class="festival">Festival Sales</div>
-          </div>
-            <img src="assets/images/Phones/phone4.png" alt="">
-            <p class="description">10.2 inches Ipad 9th Gen Wi-Fi 64gb</p>
-            <p class="price"> 229,000.00</p>
-        </div>
-  
-        <div class="item text-center">
-          <div class="new_festival">
-              <div class="new">New</div>
-            <div class="festival">Festival Sales</div>
-          </div>
-            <img src="assets/images/Phones/phone5.png" alt="">
-            <p class="description">10.2 inches Ipad 9th Gen Wi-Fi 64gb</p>
-            <p class="price"> 229,000.00</p>
-        </div>
-    
+      <?php
+
+        $result->table_name = "products";
+        $select = $result->selectAll();
+        $rowCount = $result->stmt->rowCount();
+        if($rowCount > 0){
+          while($row = $result->stmt->fetch(PDO::FETCH_ASSOC)){
+
+            $id = $row["id"];
+            $name = $row["name"];
+            $price = $row["price"];
+            $image = $row["image"];
+            $description = $row["description"];
+
+            echo '
+              <a href="product_details.php?detail='.$id.'">
+                <div class="item text-center">
+                <div class="new_festival">
+                    <div class="new">New</div>
+                  <div class="festival">Festival Sales</div>
+                </div>
+                  <img src="./upload/'.$image.'" alt="">
+                  <p class="description"> '.$name.' </p>
+                  <p class="price"> '.$price.' </p>
+              </div>
+              </a>
+            ';
+
+          }
+        }
+
+            ?>
+
       </div>
     </div>
   </div>
