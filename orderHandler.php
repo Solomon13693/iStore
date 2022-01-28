@@ -11,7 +11,8 @@ $phone_err = "";
 
 session_start();
 
-
+if(isset($_POST["checkout"])){
+  
 $firstname = $_POST["first_name"];
 $lastname = $_POST["last_name"];
 $address = $_POST["address"];
@@ -39,5 +40,7 @@ if($firstname == ""){
      $result->insert( "firstname, lastname, state, city, customer_id, address, phone, total_amout" , " '$firstname', '$lastname', '$state', '$city', '$user_id', '$address', '$phone', '$total' ");
      header("Location: paystack.php");
  }
+}
+
 
 ?>
